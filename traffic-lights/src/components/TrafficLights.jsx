@@ -14,27 +14,29 @@ const TrafficLights = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900"
+      style={{
+        backgroundImage: "url('/images/background.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center"
+      }}>
       {/* Semáforo */}
       <div className="flex flex-col items-center p-6 bg-black rounded-lg shadow-lg">
         <div
-          className={`w-16 h-16 mb-4 rounded-full ${
-            color === 'red' ? 'bg-red-600 ring-4 ring-red-400' : 'bg-red-900'
-          }`}
+          className={`w-16 h-16 mb-4 rounded-full ${color === 'red' ? 'bg-red-600 ring-4 ring-red-400' : 'bg-red-900'
+            }`}
           onClick={() => setColor('red')}
         ></div>
         <div
-          className={`w-16 h-16 mb-4 rounded-full ${
-            color === 'yellow'
+          className={`w-16 h-16 mb-4 rounded-full ${color === 'yellow'
               ? 'bg-yellow-600 ring-4 ring-yellow-400'
               : 'bg-yellow-900'
-          }`}
+            }`}
           onClick={() => setColor('yellow')}
         ></div>
         <div
-          className={`w-16 h-16 rounded-full ${
-            color === 'green' ? 'bg-green-600 ring-4 ring-green-400' : 'bg-green-900'
-          }`}
+          className={`w-16 h-16 rounded-full ${color === 'green' ? 'bg-green-600 ring-4 ring-green-400' : 'bg-green-900'
+            }`}
           onClick={() => setColor('green')}
         ></div>
         {color === 'purple' && (
